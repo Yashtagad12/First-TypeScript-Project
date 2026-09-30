@@ -137,17 +137,12 @@ function ValueType(value: any) {
 
 ValueType("Coffee"); // Returns "COFFEE"
 
-type Books = 'Harry Potter' | 'Lord of the Rings' | '1984';
-type Pen = 'Parker' | 'Reynolds' | 'Cello';
-type Pencil = 'Nataraj' | 'Apsara' | 'Camlin';
+type Books = ['Harry Potter', 'Lord of the Rings', '1984'];
+type Pen = ['Parker', 'Reynolds', 'Cello'];
+type Pencil = ['Nataraj', 'Apsara', 'Camlin'];
 
-
-function StationaryItem(item: Books | Pen | Pencil) {
-    if (item === 'Harry Potter' || item === 'Lord of the Rings' || item === '1984') {
-        return `You ordered the book: ${item}`;
+function StationaryItems(item: Books | Pen | Pencil) {
+    if (item[0] === 'Harry Potter') {
+        return `You selected a book: ${item[0]}`;
     }
-    if (item === 'Parker' || item === 'Reynolds' || item === 'Cello') {
-        return `You ordered the pen: ${item}`;
-    }
-    return `You ordered the pencil: ${item}`;
 }
