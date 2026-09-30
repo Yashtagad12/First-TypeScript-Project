@@ -67,3 +67,35 @@ function serveCoffeeOrder(order: CoffeeOrder | string) {
     return `Serving default coffee. ${order}`;
 
 }
+
+type DalgonaCoffee = {
+    type: "Dalgona"
+    sugar: number
+};
+type LatteCoffee = {
+    type: "Latte"
+    sugar: number
+};
+type CappuccinoCoffee = {
+    type: "Cappuccino"
+    sugar: number
+};
+
+type Coffee = DalgonaCoffee | LatteCoffee | CappuccinoCoffee;
+
+function serveCoffeeType(coffee: Coffee) {
+    switch (coffee.type) {
+        case "Dalgona":
+            return `Serving Dalgona coffee with ${coffee.sugar} sugar.`;
+            break
+        case "Latte":
+            return `Serving Latte coffee with ${coffee.sugar} sugar.`;
+            break;
+        case "Cappuccino":
+            return `Serving Cappuccino coffee with ${coffee.sugar} sugar.`;
+            break;
+        default:
+            return "Serving default coffee.";
+    }
+
+}
