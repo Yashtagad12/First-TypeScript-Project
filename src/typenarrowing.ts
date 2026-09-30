@@ -99,3 +99,55 @@ function serveCoffeeType(coffee: Coffee) {
     }
 
 }
+
+const data: unknown = "chai aur code";
+const strData: string = data as string;
+
+type Role = "admin" | "user" | "guest";
+
+function getRole(role: Role) {
+    if (role === "admin") {
+        return "You are an admin.";
+    }
+    if (role === "user") {
+        return "You are a user.";
+    }
+    return "You are a guest.";
+
+}
+
+let value: any;
+
+value = "Coffee";
+value = 12;
+value = 2.4;
+value.toUpperCase(); // This will throw an error at runtime because value is a number now.
+
+function ValueType(value: any) {
+    if (typeof value === "string") {
+        return value.toUpperCase();
+    }
+    if (typeof value === "number") {
+        return "Invalid input.";
+    }
+
+    return "Default value.";
+
+}
+
+ValueType("Coffee"); // Returns "COFFEE"
+
+type Books = 'Harry Potter' | 'Lord of the Rings' | '1984';
+type Pen = 'Parker' | 'Reynolds' | 'Cello';
+type Pencil = 'Nataraj' | 'Apsara' | 'Camlin';
+
+
+function StationaryItem(item: Books | Pen | Pencil) {
+    if (item === 'Harry Potter' || item === 'Lord of the Rings' || item === '1984') {
+        return `You ordered the book: ${item}`;
+    }
+    if (item === 'Parker' || item === 'Reynolds' || item === 'Cello') {
+        return `You ordered the pen: ${item}`;
+    }
+    return `You ordered the pencil: ${item}`;
+}
