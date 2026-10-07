@@ -24,7 +24,16 @@ class IrishCoffee implements coffeeRecipe {
     sugar = 10;
     strong = true;
 
-    if() {
-
-    }
 }
+
+type Config = {
+    readonly appName: string;
+    version: number;
+}
+
+const cfg: Config = {
+    appName: "Masterji"
+    version: 1
+}
+
+// cfg.appName = 'CoffeeCode'
