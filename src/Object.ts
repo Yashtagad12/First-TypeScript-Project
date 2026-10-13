@@ -46,3 +46,38 @@ const myBeverage = (update: Partial<Beverage>) => {
 }
 
 myBeverage({ price: 25 });
+
+type Chaiorder = {
+    name?: string;
+    quantiy?: number;
+}
+
+const placeOrder = (chai: Required<Chaiorder>) => {
+    console.log(chai);
+}
+
+placeOrder({ name: "Chai", quantiy: 2 });
+
+
+type chai = {
+    name: string;
+    price: number;
+    isHot: boolean;
+    ingredients: string[];
+}
+
+type BasicChaiInfo = Pick<chai, "name" | "price">;
+
+const ChaiInfo: BasicChaiInfo = {
+    name: "Lemon Tea",
+    price: 30
+}
+
+type chaiNew = {
+    name: string;
+    price: number;
+    isHot: boolean;
+    secretIngredients: string[];
+}
+
+type PublicChai = Omit<chai, "secretIngredients">;
