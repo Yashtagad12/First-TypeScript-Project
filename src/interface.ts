@@ -37,3 +37,4 @@ const cfg: Config = {
 }
 
 // cfg.appName = 'CoffeeCode'
+
