@@ -32,8 +32,8 @@ type Config = {
 }
 
 const cfg: Config = {
-    appName: "Masterji"
-    version: 1
+    appName: "Masterji",
+    version: 1,
 }
 
 // cfg.appName = 'CoffeeCode'
