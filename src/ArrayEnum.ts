@@ -42,3 +42,25 @@ enum Cupsize {
 }
 
 const size = Cupsize.MEDIUM;
+
+enum Chaitype {
+    MASALA = "Masala",
+    GINGER = "Ginger",
+    CARDAMOM = "Cardamom",
+}
+
+function makeChai(type: Chaitype) {
+    console.log(`Making ${type} Chai`);
+}
+
+makeChai(Chaitype.MASALA);
+makeChai(Chaitype.GINGER);
+makeChai(Chaitype.CARDAMOM);
+
+const enum Sugars {
+    LOW = 1,
+    MEDIUM = 2,
+    HIGH = 3,
+}
+
+let s = Sugars.MEDIUM;
