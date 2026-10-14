@@ -4,7 +4,6 @@ let Coffee: {
     isHot: boolean,
 }
 
-
 Coffee = {
 
     name: "StrongCoffe",
