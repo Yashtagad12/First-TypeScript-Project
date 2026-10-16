@@ -55,3 +55,12 @@ const userDetails: User = {
     age: 30
 }
 
+interface A {
+    a: string;
+}
+
+interface B {
+    b: number;
+}
+
+interface C extends A, B { }    
