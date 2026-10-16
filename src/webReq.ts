@@ -1,4 +1,4 @@
-import axios, { AxiosResponse } from "axios";
+import axios, { type AxiosResponse } from "axios";
 
 interface Todo {
     userId: number;
@@ -7,20 +7,16 @@ interface Todo {
     completed: boolean;
 }
 
-
 const fetchData = async () => {
-
     try {
-        const response: AxiosResponse<Todo> = await axios.get("https://jsonplaceholder.typicode.com/todos/1");
+        const response: AxiosResponse<Todo> = await axios.get<Todo>("https://jsonplaceholder.typicode.com/todos/1");
         console.log("Data received:", response.data);
-    } catch (error: any) {
+    } catch (error: unknown) {
         if (axios.isAxiosError(error)) {
             console.error("Axios error:", error.message);
-
             if (error.response) {
                 console.error("Error response:", error.response.status, error.response.data);
             }
         }
-
     }
-}
+};
