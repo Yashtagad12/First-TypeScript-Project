@@ -12,6 +12,7 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "axois": "^0.0.1-security",
     "typescript": "^7.0.2"
   }
 }
