@@ -28,7 +28,7 @@ function App() {
       <div>
         <OrderForm
           onSubmit={(order) => {
-            console.log("Placed", order.name, order.cups);
+            console.log("Placed", order.name, order.quantity);
           }}
         />
       </div>
