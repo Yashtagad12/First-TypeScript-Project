@@ -34,7 +34,7 @@ function App() {
         />
       </div>
       <div>
-        <Card title="This is card" footer="Yash" />
+        <Card title="This is card" footer={<button>Order Now</button>} />
       </div>
     </>
   );
